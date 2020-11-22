@@ -1,0 +1,42 @@
+.danger {
+    color: #ff0d00;
+}
+
+.alright {
+    color: #60ff00;
+}
+
+.today {
+    color: #a0a0a0;
+    font-size: 1.2em;
+}
+
+.statistics {
+    text-align: center;
+
+    width: 600px;
+    padding-top: 250px;
+    margin: 0 auto 0 auto;
+
+    color: #fff;
+}
+
+.statistics__total {
+    font-size: 1.5em;
+}
+
+.statistics__dead-recovered {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding-top: 20px;
+}
+
+.statistics__title {
+    font-size: 1.5em;
+}
+
+.statistics__subtitle {
+    font-size: 1.25em;
+}
