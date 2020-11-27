@@ -1,0 +1,31 @@
+.news__item {
+    width: 100%;
+
+    background-color: #fff;
+    border-radius: 10px;
+
+    color: #000;
+    text-decoration: none;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: flex-start;
+
+    &--img {
+        min-width: 150px;
+        min-height: 150px;
+    
+        margin-right: 20px;
+    }
+
+    &--title {
+        font-size: 22px;
+        font-weight: 700;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+}
+
+.news__item:not(:first-child) {
+    margin-top: 20px;
+}

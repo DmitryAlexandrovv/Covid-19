@@ -1,0 +1,20 @@
+.news__list {
+    margin: 40px auto 50px auto;
+    width: 800px;
+
+    padding: 0 20px 0 0;
+
+    overflow-y: scroll;
+    max-height: 600px;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+    border-radius: 9em;
+    background-color: #232B2B;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #DC3D24;
+    border-radius: 9em;
+}

@@ -18,10 +18,29 @@ const menuOnError = () => {
 }
 
 const menuSubmitted = (country) => {
-    console.log(country.Country)
     return {
         type: 'MENU_SUBMITTED',
         payload: country,
+    }
+}
+
+const newsRequested = () => {
+    return {
+        type: 'NEWS_REQUESTED',
+    }
+}
+
+const newsLoaded = (news) => {
+    return {
+        type: 'NEWS_LOADED',
+        payload: news,
+    }
+}
+
+const pageChanged = (newPage) => {
+    return {
+        type: 'PAGE_CHANGED',
+        payload: newPage,
     }
 }
 
@@ -30,4 +49,7 @@ export {
     menuRequested,
     menuOnError,
     menuSubmitted,
+    newsRequested,
+    newsLoaded,
+    pageChanged,
 }

@@ -1,2 +1,3 @@
 import MainPage from './mainPage';
-export {MainPage};
+import NewsPage from './news/newsPage';
+export {MainPage, NewsPage};

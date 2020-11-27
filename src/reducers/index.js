@@ -2,6 +2,7 @@ const initialState = {
     menu: [],
     loading: true,
     error: false,
+
     selectedCountry: 'Afghanistan',
     confirmed: 0,
     totalConfirmed: 0,
@@ -9,7 +10,11 @@ const initialState = {
     totalDeaths: 0,
     recovered: 0,
     totalRecovered: 0,
-}
+
+    newsList: [],
+
+    pages: ['Statistics', 'News'],
+    activePage: 'Statistics',}
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -41,6 +46,22 @@ const reducer = (state = initialState, action) => {
                 totalDeaths: action.payload.TotalDeaths,
                 recovered: action.payload.NewRecovered,
                 totalRecovered: action.payload.TotalConfirmed,
+            }
+        case 'NEWS_REQUESTED':
+            return {
+                ...state,
+                loading: true,
+            }
+        case 'NEWS_LOADED': 
+            return {
+                ...state,
+                news: action.payload,
+                loading: false,
+            }
+        case 'PAGE_CHANGED':
+            return {
+                ...state,
+                activePage: action.payload,
             }
         default:
             return state;

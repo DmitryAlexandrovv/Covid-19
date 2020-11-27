@@ -10,15 +10,6 @@ import {withRouter} from 'react-router-dom';
 import './countryList.scss';
 
 class CountryList extends Component {
-    componentDidMount() {
-        this.props.menuRequested();
-
-        const {CovidService} = this.props;
-        CovidService.getMenuItems()
-            .then(res => this.props.menuLoaded(res))
-            .catch(() => this.props.menuOnError());
-    }
-
     render() {
         const {menuItems, loading, error, selectedCountry} = this.props;
 
@@ -33,7 +24,7 @@ class CountryList extends Component {
         const items = menuItems.map((menuItem, i) => {
             let selected = menuItem.Country === selectedCountry ? true : false;
             return <Country 
-                key={menuItem.i}
+                key={i}
                 country={menuItem.Country}
                 slug={menuItem.Slug}
                 selected={selected} />

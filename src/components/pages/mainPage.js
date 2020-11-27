@@ -17,6 +17,7 @@ class MainPage extends Component {
             .then(res => {
                 const slug = this.props.country ? this.props.country : 'global';
                 const selectedCountry = res.filter(country => country.Slug === slug);
+                this.props.menuLoaded(res);
                 this.props.menuSubmitted(selectedCountry[0]);
             })
     }
@@ -66,10 +67,6 @@ class MainPage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        menuItems: state.menu,
-        loading: state.loading,
-        error: state.error,
-        selectedCountry: state.selectedCountry,
     }
 }
 
