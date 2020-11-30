@@ -21,6 +21,8 @@ class NewsList extends Component {
             return <Spinner />
         }
 
+        console.log(news);
+
         const items = news.map((item, i) => {
             return(
                 <NewsItem
@@ -41,7 +43,7 @@ class NewsList extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        news: state.news,
+        news: state.newsList,
         loading: state.loading,
         error: state.error,
     }

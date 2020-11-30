@@ -12,9 +12,9 @@ class Header extends Component {
         console.log(items);
         return items.map((item, i) => {
             const clazz = this.props.activePage === item ? 'header__link active' : 'header__link';
-            const linkTo = item === 'Statistics' ? '/' : `/${item.toLowerCase()}`;
+            const linkTo = item === 'Home' ? '/' : `/${item.toLowerCase()}`;
             return(
-                <Link onClick={() => pageChanged(item)} className={clazz} to={linkTo}>
+                <Link onClick={() => this.props.pageChanged(item)} className={clazz} to={linkTo}>
                     {item}
                 </Link>
             )

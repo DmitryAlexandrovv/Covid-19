@@ -1,5 +1,5 @@
 const NewsAPI = require('newsapi');
-const apiKey = 'c86a3d3c542a4b9fb7ad25c3644df3cb';
+const apiKey = '869434d743814b44b4dc8cd801f9c9ae';
 
 export default class NewsService{
     constructor(){

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {WithNewsService} from '../../hoc';
-import {newsLoaded, newsRequested, menuSubmitted} from '../../../actions';
+import {newsLoaded, newsRequested, menuSubmitted, pageChanged} from '../../../actions';
 import {withRouter} from 'react-router-dom';
 import NewsList from '../../news-list';
 
@@ -14,11 +14,8 @@ class NewsPage extends Component{
         NewsService.getNews('covid')
             .then(res => {
                 this.props.newsLoaded(res.articles);
+                this.props.pageChanged('News');
             })
-    }
-
-    componentDidUpdate(){
-        console.log(1);
     }
 
     render(){
@@ -39,6 +36,7 @@ const mapDispatchToProps = {
     newsLoaded,
     newsRequested,
     menuSubmitted,
+    pageChanged,
 }
 
 export default withRouter(WithNewsService()(connect(mapStateToProps, mapDispatchToProps)(NewsPage)));

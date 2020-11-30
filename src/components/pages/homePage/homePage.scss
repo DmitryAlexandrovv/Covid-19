@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recomendation {
+    color: #fff;
+    text-align: center;
+    font-size: 1.7em;
+
+    padding-top: 150px;
+
+    &__title {
+        font-weight: 600;
+        padding: 8px 0;
+    }
+
+    h4 {
+        line-height: 1.3;
+    }
+
+    &__icon {
+        width: 120px;
+        margin: 2px auto 8px auto;
+        display: block;
+    }
+}

@@ -13,8 +13,9 @@ const initialState = {
 
     newsList: [],
 
-    pages: ['Statistics', 'News'],
-    activePage: 'Statistics',}
+    pages: ['Home', 'Statistics', 'News'],
+    activePage: 'Home',
+}
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -55,10 +56,11 @@ const reducer = (state = initialState, action) => {
         case 'NEWS_LOADED': 
             return {
                 ...state,
-                news: action.payload,
+                newsList: action.payload,
                 loading: false,
             }
         case 'PAGE_CHANGED':
+            console.log(action.payload)
             return {
                 ...state,
                 activePage: action.payload,
